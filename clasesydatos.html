@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases y Datos | Gimnasio Los Ríos</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #ff3131; background-color: #f4f6f8; padding-bottom: 20px; }
+        a { text-decoration: none; color: inherit; }
+        
+        /* Navigation & Header */
+        header { background-color: #1a1a1a; color: #ffffff; padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        nav a { color: #ffffff; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; padding: 0.5rem 0.8rem; border-radius: 4px; transition: background 0.3s, color 0.3s; }
+        nav a:hover, nav a.active { background-color: #ff3131; color: #ffffff; }
+
+        /* Main Container */
+        .container { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; display: grid; grid-template-columns: 2.5fr 1fr; gap: 2rem; }
+        section, aside { background: #ffffff; padding: 2rem; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        
+        h1, h2, h3 { color: #1a1a1a; margin-bottom: 1rem; }
+        h1 { font-size: 2rem; border-bottom: 3px solid #000; padding-bottom: 0.5rem; }
+        h2 { font-size: 1.5rem; margin-top: 1rem; }
+
+        /* Tables */
+        .table-responsive { width: 100%; overflow-x: auto; margin-bottom: 1.5rem; }
+        table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; background: #ffffff; }
+        th, td { padding: 0.8rem 1rem; text-align: left; border-bottom: 1px solid #e0e0e0; }
+        th { background-color: #000; color: #ff3131; font-weight: 600; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 0.5px; }
+        tr:nth-child(even) { background-color: #fff; }
+        tr:hover { background-color: #000; }
+
+        /* Badge/Highlights */
+        .badge { background-color: #ff3131; color: #000; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.75rem; font-weight: bold; }
+
+        /* Google Maps Embed Section */
+        .map-section { margin-top: 2rem; }
+        .map-container { width: 100%; height: 350px; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 1rem; border: 2px solid #e0e0e0; }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+        .location-info { margin-top: 1rem; background: #000; padding: 1rem; border-left: 4px solid #ff4500; border-radius: 0 6px 6px 0; }
+
+        /* Glossary Side Area */
+        aside h2 { border-bottom: 2px solid #feb06a; padding-bottom: 0.4rem; }
+        .glossary-list { list-style: none; margin-top: 1rem; }
+        .glossary-list li { margin-bottom: 1.2rem; border-bottom: 1px dashed #e0e0e0; padding-bottom: 0.8rem; }
+        .glossary-list li:last-child { border-bottom: none; }
+        .glossary-term { font-weight: bold; color: #ff3131; display: block; font-size: 1rem; margin-bottom: 0.2rem; }
+        .glossary-def { font-size: 0.9rem; color: #000; }
+
+        /* Footer */
+        footer { text-align: center; padding: 1.5rem; background-color: #1a1a1a; color: #ff3131; margin-top: 2rem; }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            nav ul { flex-direction: column; align-items: center; gap: 0.5rem; }
+            th, td { padding: 0.6rem; font-size: 0.85rem; }
+            .map-container { height: 260px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Main Navigation Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="gympowerfitnesscenter.html">Inicio</a></li>
+                <li><a href="sobrenosotrosgympowerfitnesscenter.html">Sobre Nosotros</a></li>
+                <li><a href="entrenadores.html">Entrenadores</a></li>
+                <li><a href="clasesydatos.html" class="active">Clases y Datos</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <!-- Main Content Column -->
+        <main>
+            <section id="horarios-clases">
+                <h1>Horarios y Clases Disponibles</h1>
+                <p>Ofrecemos programas de entrenamiento diseñados para jóvenes y adultos de 16 a 40 años en instalaciones totalmente equipadas.</p>
+
+                <!-- Class Schedule Table -->
+                <h2>Programación de Clases Dirigidas</h2>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Clase</th>
+                                <th>Días</th>
+                                <th>Horario</th>
+                                <th>Zona / Sala</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Spinning / Ciclo</strong></td>
+                                <td>Lunes, Miércoles, Viernes</td>
+                                <td>6:00 AM - 7:00 AM</td>
+                                <td>Sala Aeróbica 1</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Zumba Fitness</strong></td>
+                                <td>Martes, Jueves</td>
+                                <td>6:30 PM - 7:30 PM</td>
+                                <td>Salon Multiusos</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pesas & Musculación</strong></td>
+                                <td>Lunes a Sábado</td>
+                                <td>5:00 AM - 10:00 PM</td>
+                                <td>Área Central de Pesas</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Acondicionamiento General</strong></td>
+                                <td>Lunes a Viernes</td>
+                                <td>5:00 PM - 6:30 PM</td>
+                                <td>Zona Funcional</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Google Maps Interactive Location -->
+                <div class="map-section">
+                    <h2>Ubicación de Nuestra Sede</h2>
+                    <p>Encuéntranos estratégicamente ubicados en el sector Los Ríos, Santo Domingo.</p>
+                    
+                    <div class="map-container">
+                        <!-- Embedded Google Map centered in Sector Los Ríos, Santo Domingo -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15135.215865203713!2d-69.960241!3d18.492576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eef8dc2ea93e3d7%3A0x8e833482329bd228!2sLos%20Rios%2C%20Santo%20Domingo%2C%20Dominican%20Republic!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Ubicación Gimnasio Los Ríos Santo Domingo">
+                        </iframe>
+                    </div>
+
+                    <div class="location-info">
+                        <p><strong>Dirección:</strong> Sector Los Ríos, Santo Domingo, D.N., República Dominicana.</p>
+                        <p><strong>Gerencia General:</strong> Junior Castillo</p>
+                        <p><strong>Referencias:</strong> Cerca de avenidas principales del sector, con estacionamiento accesible para socios.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sidebar Area: Fitness Glossary -->
+        <aside id="glosario">
+            <h2>Glosario Fitness</h2>
+            <p>Términos clave para potenciar tu entrenamiento:</p>
+            <ul class="glossary-list">
+                <li>
+                    <span class="glossary-term">Spinning</span>
+                    <span class="glossary-def">Entrenamiento cardiovascular en bicicleta estática guiado por un instructor con ritmo musical adaptado.</span>
+                </li>
+                <li>
+                    <span class="glossary-term">Zumba</span>
+                    <span class="glossary-def">Rutina de acondicionamiento físico que combina baile y movimientos aeróbicos al ritmo de música latina e internacional.</span>
+                </li>
+                <li>
+                    <span class="glossary-term">Hipertrofia</span>
+                    <span class="glossary-def">Aumento del tamaño muscular a través del entrenamiento de fuerza progresivo y nutrición adecuada.</span>
+                </li>
+                <li>
+                    <span class="glossary-term">Cardio HIIT</span>
+                    <span class="glossary-def">Entrenamiento en intervalos de alta intensidad que acelera la quema de calorías en sesiones cortas.</span>
+                </li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><small>&copy; Gimnasio en Los Ríos, Santo Domingo. Gerencia: Junior Castillo. Todos los derechos reservados.</small></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | Gimnasio Los Ríos</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Segoe UI','Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; line-height: 1.6; color: #000; background-color: #f4f6f8; padding-bottom: 20px; }
+        a { text-decoration: none; color: inherit; }
+        
+        header { background-color: #000; color: #ffffff; padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+        nav a { color: #ffffff; font-weight: 600; text-transform: uppercase; font-size: 0.9rem; padding: 0.5rem 0.8rem; border-radius: 4px; transition: background 0.3s, color 0.3s; }
+        nav a:hover, nav a.active { background-color: #ff3131; color: #ffffff; }
+
+        .container { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; display: grid; grid-template-columns: 2.5fr 1fr; gap: 2rem; }
+        section, aside { background: #ffffff; padding: 2rem; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        h1, h2, h3 { color: #000; margin-bottom: 1rem; }
+        h1 { font-size: 2rem; border-bottom: 3px solid #ff3131; padding-bottom: 0.5rem; }
+        h2 { font-size: 1.4rem; color: #000; margin-top: 1rem; }
+        h3 { font-size: 1.2rem; color: #ff3131; }
+        p { margin-bottom: 1rem; }
+        article { margin-bottom: 1.5rem; }
+
+        blockquote { background-color: #fff0eb; border-left: 5px solid #ff3131; padding: 1rem; margin: 1rem 0; font-style: italic; color: #555555; border-radius: 0 4px 4px 0; }
+
+        aside h2 { border-bottom: 2px solid #ff3131; padding-bottom: 0.4rem; }
+        dl dt { font-weight: bold; color: #ff3131; margin-top: 1rem; font-size: 1.05rem; }
+        dl dd { margin-left: 0; margin-bottom: 0.5rem; color: #555555; font-size: 0.95rem; }
+
+        footer { text-align: center; padding: 1.5rem; background-color: #1a1a1a; color: #aaaaaa; margin-top: 2rem; }
+
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; }
+            nav ul { flex-direction: column; align-items: center; gap: 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="gympowerfitnesscenter.html">Inicio</a></li>
+                <li><a href="sobre-nosotros.html" class="active">Sobre Nosotros</a></li>
+                <li><a href="entrenadores.html">Entrenadores</a></li>
+                <li><a href="clases-y-datos.html">Clases y Datos</a></li>
+                <li><a href="contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <section id="historia">
+                <h1>Historia y Filosofía de Nuestro Gimnasio</h1>
+
+                <article>
+                    <h3>Orígenes y Visión Comunitaria</h3>
+                    <p>Fundado bajo la gerencia de <b>Junior Castillo</b>, el gimnasio nació para ofrecer al sector de Los Ríos un espacio de tamaño mediano bien equipado donde jóvenes y adultos (de 16 a 40 años) puedan transformar su salud. A diferencia de las grandes cadenas comerciales, nos enfocamos en brindar un <strong>ambiente familiar, cercano y motivador</strong>.</p>
+                    <blockquote>"No somos solo un lugar con pesas y máquinas; somos una comunidad donde cada socio recibe la atención y orientación que merece." - <i>Junior Castillo (Gerente)</i></blockquote>
+                </article>
+
+                <article>
+                    <h3>Equipamiento Completo y Acompañamiento</h3>
+                    <p>Contamos con un área de peso libre, máquinas avanzadas y una zona acondicionada para clases grupales. La clave de nuestro éxito es que cada usuario entrena de la mano de <b>entrenadores certificados</b> que corrigen la postura y adaptan las rutinas a cada nivel.</p>
+                </article>
+
+                <article>
+                    <h3>La Experiencia de Entrenar en Casa</h3>
+                    <p>Priorizamos la comodidad y el respeto entre los miembros. Queremos que desde el primer día te sientas seguro y motivado, sin importar si estás empezando tu vida fitness o si ya tienes experiencia previa.</p>
+                </article>
+            </section>
+        </main>
+
+        <aside id="glosario">
+            <h2>Glosario Fitness</h2>
+            <dl>
+                <dt>Peso Libre</dt>
+                <dd>Mancuernas y barras que permiten movimientos corporales naturales y desarrollo de fuerza balanceada.</dd>
+
+                <dt>Hipertrofia</dt>
+                <dd>Aumento gradual del tamaño muscular mediante el trabajo planificado con pesas y máquinas.</dd>
+            </dl>
+        </aside>
+    </div>
+
+    <footer>
+        <p><small>&copy; Gimnasio en Los Ríos, Santo Domingo. Gerencia: Junior Castillo. Todos los derechos reservados.</small></p>
+    </footer>
+
+</body>
+</html>
